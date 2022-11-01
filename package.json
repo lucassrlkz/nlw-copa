@@ -1,31 +1,15 @@
 {
-<<<<<<< HEAD
-  "name": "nlw-copa",
-=======
   "name": "nlw-copa-rocketseat",
->>>>>>> 9f4495f (initial commit with turborepo)
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "turbo run dev",
-<<<<<<< HEAD
-    "server":"turbo run dev --filter=server"
-=======
     "server": "turbo run dev --filter=server"
->>>>>>> 9f4495f (initial commit with turborepo)
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-<<<<<<< HEAD
-  "workspaces": [
-    "backend/",
-    "frontend/web"
-  ],
-  "devDependencies": {
-    "turbo": "^1.6.2"
-=======
   "devDependencies": {
     "prisma": "^4.5.0",
     "turbo": "^1.6.3",
@@ -33,6 +17,5 @@
   },
   "dependencies": {
     "@prisma/client": "^4.5.0"
->>>>>>> 9f4495f (initial commit with turborepo)
   }
 }
