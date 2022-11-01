@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "pipeline": {
     "build": {
       "outputs": [".next/**"]
@@ -9,6 +10,28 @@
     "dev":{
       "cache":false,
       "outputs":[]
+=======
+  "$schema": "https://turbo.build/schema.json",
+  "pipeline": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": [".next/**"]
+    },
+
+    "test": { },
+    
+    "dev":{
+      "cache":false
+    },
+
+    "lint": {
+      "outputs": []
+    },
+    
+    "deploy": {
+      "dependsOn": ["build", "test", "lint"],
+      "outputs": []
+>>>>>>> 9f4495f (initial commit with turborepo)
     }
   }
 }

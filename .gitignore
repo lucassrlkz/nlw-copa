@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # turbo config ignore
 .turbo
 node_modules
@@ -10,3 +11,12 @@ node_modules
 
 # frontend mobile config ignore
 node_modules
+=======
+# config turborepo
+.turbo
+node_modules
+
+# config server workspace
+server/node_modules
+server/.env
+>>>>>>> 9f4495f (initial commit with turborepo)
