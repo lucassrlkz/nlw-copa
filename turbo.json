@@ -1,0 +1,14 @@
+{
+  "pipeline": {
+    "build": {
+      "outputs": [".next/**"]
+    },
+    "lint": {
+      "outputs": []
+    },
+    "dev":{
+      "cache":false,
+      "outputs":[]
+    }
+  }
+}
