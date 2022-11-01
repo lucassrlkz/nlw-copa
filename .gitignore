@@ -1,0 +1,7 @@
+# config turborepo
+.turbo
+node_modules
+
+# config server workspace
+server/node_modules
+server/.env
