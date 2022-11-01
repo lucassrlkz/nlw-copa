@@ -4,7 +4,7 @@ node_modules
 
 # backend config ignore
   ./backend/.env
-  /backend/.env
+  backend/.env
 
 # frontend web config ignore
 
