@@ -1,4 +1,6 @@
 packages:
   # all packages in direct of server/
   - 'server/'
+  - 'frontend/web'
+  - 'frontend/mobile'
   

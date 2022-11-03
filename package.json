@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "turbo run dev",
-    "server": "turbo run dev --filter=server"
+    "server": "turbo run dev --filter=server",
+    "web": "turbo run dev --filter=web",
+    "mobile": "turbo run start --filter=mobile"
   },
   "keywords": [],
   "author": "",

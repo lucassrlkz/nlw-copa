@@ -5,3 +5,9 @@ node_modules
 # config server workspace
 server/node_modules
 server/.env
+
+#config web workspace
+frontend/web/node_modules
+frontend/web/.pnp
+frontend/web/.pnp.js
+  
