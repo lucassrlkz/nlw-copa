@@ -8,7 +8,7 @@ import { api } from '../lib/axios'
 import { FormEvent, useState } from 'react'
 
 interface HomeProps {
-	poolcount: number
+	poolCount: number
 	guessCount: number
 	userCount: number
 }
@@ -47,7 +47,7 @@ export default function Home(props: HomeProps) {
 				</h1>
 
 				<div className='mt-10 flex items-center gap-2'>
-					<Image src={usersAvatar} />
+					<Image src={usersAvatar} alt='' />
 					<strong className='text-gray-100 text-xl'>
 						<span className='text-ignite-500'> +{props.userCount}</span> pessoas
 						já estão usando
