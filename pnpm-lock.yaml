@@ -92,6 +92,7 @@ importers:
   server:
     specifiers:
       '@fastify/cors': ^8.1.1
+      '@fastify/jwt': ^6.3.2
       '@mermaid-js/mermaid-cli': ^9.1.7
       '@prisma/client': ^4.5.0
       fastify: ^4.9.2
@@ -103,6 +104,7 @@ importers:
       zod: ^3.19.1
     dependencies:
       '@fastify/cors': 8.1.1
+      '@fastify/jwt': 6.3.2
       '@prisma/client': 4.5.0_prisma@4.5.0
       prisma: 4.5.0
       short-unique-id: 4.4.4
@@ -2091,13 +2093,22 @@ packages:
 
   /@fastify/error/3.0.0:
     resolution: {integrity: sha512-dPRyT40GiHRzSCll3/Jn2nPe25+E1VXc9tDwRAIKwFCxd5Np5wzgz1tmooWG3sV0qKgrBibihVoCna2ru4SEFg==}
-    dev: true
 
   /@fastify/fast-json-stringify-compiler/4.1.0:
     resolution: {integrity: sha512-cTKBV2J9+u6VaKDhX7HepSfPSzw+F+TSd+k0wzifj4rG+4E5PjSFJCk19P8R6tr/72cuzgGd+mbB3jFT6lvAgw==}
     dependencies:
       fast-json-stringify: 5.4.0
     dev: true
+
+  /@fastify/jwt/6.3.2:
+    resolution: {integrity: sha512-LD41UNS55o1HyUlCiR1G2fDtqebvsSaxfWsVuerSLmyGWbCjfzNOPjEs4yUvMj2NjbV73ZzR3ZtR64vr1TeFYA==}
+    dependencies:
+      '@fastify/error': 3.0.0
+      '@lukeed/ms': 2.0.1
+      fast-jwt: 1.7.1
+      fastify-plugin: 4.3.0
+      steed: 1.1.3
+    dev: false
 
   /@formatjs/ecma402-abstract/1.13.0:
     resolution: {integrity: sha512-CQ8Ykd51jYD1n05dtoX6ns6B9n/+6ZAxnWUAonvHC4kkuAemROYBhHkEB4tm1uVrRlE7gLDqXkAnY51Y0pRCWQ==}
@@ -2260,6 +2271,11 @@ packages:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.0
       '@jridgewell/sourcemap-codec': 1.4.14
+
+  /@lukeed/ms/2.0.1:
+    resolution: {integrity: sha512-Xs/4RZltsAL7pkvaNStUQt7netTkyxrS0K+RILcVr3TRMS/ToOg4I6uNfhB9SlGsnWBym4U+EaXq0f0cEMNkHA==}
+    engines: {node: '>=8'}
+    dev: false
 
   /@mermaid-js/mermaid-cli/9.1.7:
     resolution: {integrity: sha512-m7sAmOHhG6bmY1IEy+rSvyrQrKA/XIM6PFWP7w+3uW/C+uanPrIt0ieLL2NJfvfzLMkvEin1ClYE+pA6Y7Jwnw==}
@@ -6556,6 +6572,12 @@ packages:
       stream-shift: 1.0.1
     dev: false
 
+  /ecdsa-sig-formatter/1.0.11:
+    resolution: {integrity: sha512-nagl3RYrbNv6kQkeJIpt6NJZy8twLB/2vtz6yN9Z4vRKHN4/QZJIEbqohALSgwKdnksuY3k5Addp5lg8sVoVcQ==}
+    dependencies:
+      safe-buffer: 5.2.1
+    dev: false
+
   /ee-first/1.1.1:
     resolution: {integrity: sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==}
     dev: false
@@ -7648,6 +7670,15 @@ packages:
       rfdc: 1.3.0
     dev: true
 
+  /fast-jwt/1.7.1:
+    resolution: {integrity: sha512-HdDR/k2d3qgUHDVwyhzYdHG/EK+IGhDGZFNidlSvCpVIhWMce8UYXUjx8hWEDhvOA032qoCtO1f/d/VcuzWhzA==}
+    engines: {node: ^18 || ^17 || ^16 || ^14 || ^12}
+    dependencies:
+      asn1.js: 5.4.1
+      ecdsa-sig-formatter: 1.0.11
+      mnemonist: 0.39.4
+    dev: false
+
   /fast-levenshtein/2.0.6:
     resolution: {integrity: sha512-DCXu6Ifhqcks7TZKY3Hxp3y6qphY5SJZmrWMDrKcERSOXWQdMhU9Ig/PYrzyw/ul9jOIyh0N4M0tbC5hodg8dw==}
     dev: false
@@ -7666,6 +7697,13 @@ packages:
   /fast-uri/2.1.0:
     resolution: {integrity: sha512-qKRta6N7BWEFVlyonVY/V+BMLgFqktCUV0QjT259ekAIlbVrMaFnFLxJ4s/JPl4tou56S1BzPufI60bLe29fHA==}
     dev: true
+
+  /fastfall/1.5.1:
+    resolution: {integrity: sha512-KH6p+Z8AKPXnmA7+Iz2Lh8ARCMr+8WNPVludm1LGkZoD2MjY6LVnRMtTKhkdzI+jr0RzQWXKzKyBJm1zoHEL4Q==}
+    engines: {node: '>=0.10.0'}
+    dependencies:
+      reusify: 1.0.4
+    dev: false
 
   /fastify-plugin/4.3.0:
     resolution: {integrity: sha512-M3+i368lV0OYTJ5TfClIoPKEKSOF7112iiPdwgfSR0gN98BjA1Nk+c6oBHtfcVt9KiMxl+EQKHC1QNWo3ZOpYQ==}
@@ -7692,10 +7730,24 @@ packages:
       - supports-color
     dev: true
 
+  /fastparallel/2.4.1:
+    resolution: {integrity: sha512-qUmhxPgNHmvRjZKBFUNI0oZuuH9OlSIOXmJ98lhKPxMZZ7zS/Fi0wRHOihDSz0R1YiIOjxzOY4bq65YTcdBi2Q==}
+    dependencies:
+      reusify: 1.0.4
+      xtend: 4.0.2
+    dev: false
+
   /fastq/1.13.0:
     resolution: {integrity: sha512-YpkpUnK8od0o1hmeSc7UUs/eB/vIPWJYjKck2QKIzAf71Vm1AAQ3EbuZB3g2JIy+pg+ERD0vqI79KyZiB2e2Nw==}
     dependencies:
       reusify: 1.0.4
+
+  /fastseries/1.7.2:
+    resolution: {integrity: sha512-dTPFrPGS8SNSzAt7u/CbMKCJ3s01N04s4JFbORHcmyvVfVKmbhMD1VtRbh5enGHxkaQDqWyLefiKOGGmohGDDQ==}
+    dependencies:
+      reusify: 1.0.4
+      xtend: 4.0.2
+    dev: false
 
   /faye-websocket/0.10.0:
     resolution: {integrity: sha512-Xhj93RXbMSq8urNCUq4p9l0P6hnySJ/7YNRhYNug0bLOuii7pKO7xQFb5mx9xZXWCar88pLPb805PvUkwrLZpQ==}
@@ -13264,6 +13316,16 @@ packages:
   /statuses/2.0.1:
     resolution: {integrity: sha512-RwNA9Z/7PrK06rYLIzFMlaF+l73iwpzsqRIFgbMLbTcLD6cOao82TaWefPXQvB2fOC4AjuYSEndS7N/mTCbkdQ==}
     engines: {node: '>= 0.8'}
+    dev: false
+
+  /steed/1.1.3:
+    resolution: {integrity: sha512-EUkci0FAUiE4IvGTSKcDJIQ/eRUP2JJb56+fvZ4sdnguLTqIdKjSxUe138poW8mkvKWXW2sFPrgTsxqoISnmoA==}
+    dependencies:
+      fastfall: 1.5.1
+      fastparallel: 2.4.1
+      fastq: 1.13.0
+      fastseries: 1.7.2
+      reusify: 1.0.4
     dev: false
 
   /stream-browserify/2.0.2:
