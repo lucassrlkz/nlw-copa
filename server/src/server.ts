@@ -17,7 +17,7 @@ async function bootstrap() {
 	})
 
 	await fastify.register(jwt, {
-		secret: `${process.env.jwt_secret}`,
+		secret: 'NLW-copa',
 	})
 
 	await fastify.register(poolRoutes)
@@ -26,7 +26,7 @@ async function bootstrap() {
 	await fastify.register(gameRoutes)
 	await fastify.register(guessRoutes)
 
-	await fastify.listen({ port: 3333 /*host: '0.0.0.0'*/ })
+	await fastify.listen({ port: 3333, host: '0.0.0.0' })
 }
 
 bootstrap()
